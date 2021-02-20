@@ -1,0 +1,54 @@
+:root {
+  --ff: "Montserrat", sans-serif;
+  --fw-600: 600;
+  --fw-700: 700;
+  --clr-primary-1: hsla(0, 0%, 100%, 1);
+  --clr-primary-2: hsla(0, 0%, 74%, 1);
+  --clr-primary-3: hsla(0, 0%, 51%, 1);
+  --clr-secondary: hsla(160, 2%, 31%, 1);
+  --clr-orange: hsla(28, 87%, 62%, 1);
+  --fs-12: 1.2rem;
+  --fs-14: 1.4rem;
+  --fs-16: 1.6rem;
+  --fs-18: 1.8rem;
+  --magic: 11vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  position: relative;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+i[class],
+img {
+  user-select: none;
+}
+
+body {
+  font-weight: var(--fw-600);
+  font-family: var(--ff);
+  background-color: var(--clr-primary-1);
+  width: calc(100% - (clamp(1px, var(--magic), 240px) * 2));
+  margin: auto;
+  padding: 6.4rem 0;
+}
