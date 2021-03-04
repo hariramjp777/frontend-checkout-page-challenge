@@ -9,6 +9,7 @@
   --clr-gray-4: hsl(0, 0%, 74%);
   --clr-gray-5: hsl(0, 0%, 88%);
   --clr-gray-6: hsl(0, 0%, 95%, 1);
+  --clr-orange: hsl(28, 87%, 62%);
 }
 
 /* FONTS */
@@ -53,13 +54,21 @@ i[class] {
 }
 
 input,
-button {
+button,
+select {
   font: inherit;
+  background-color: transparent;
+  border: 0;
 }
 
 input:focus,
-button:focus {
+button:focus,
+select:focus {
   outline: 0;
+}
+
+button:active {
+  transform: scale(0.95);
 }
 
 /* BODY */
@@ -71,4 +80,145 @@ body {
   margin: auto;
   font: var(--fw-semibold) var(--fs-md) var(--ff);
   color: var(--clr-gray-1);
+}
+
+/* HEADER */
+
+h1 {
+  font-size: var(--fs-xl);
+  color: var(--clr-primary);
+}
+
+/* MAIN */
+
+main {
+  margin: 5rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* width: 50%; */
+}
+
+form > :nth-child(2) {
+  margin-top: 5.8rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group > * + * {
+  margin-top: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group > :nth-child(2) {
+  margin-top: 0.7rem;
+}
+
+h2 {
+  font-size: var(--fs-lg);
+}
+
+label {
+  font-size: var(--fs-xs);
+  color: var(--clr-gray-2);
+}
+
+.input-field {
+  border: 0.1rem solid var(--clr-gray-3);
+  border-radius: 1.2rem;
+  height: 5.6rem;
+  padding: 0 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.input-field > :nth-child(2) {
+  margin-left: 1.8rem;
+  flex: 1;
+}
+
+input::placeholder {
+  color: var(--clr-gray-3);
+}
+
+.input-flex {
+  display: flex;
+}
+
+.input-flex > * {
+  flex: 1;
+}
+
+.input-flex > :nth-child(2) {
+  margin-left: 3.1rem;
+}
+
+option {
+  color: var(--clr-gray-3);
+  font-weight: 500;
+}
+
+.input-group.cb {
+  flex-direction: row;
+  align-items: center;
+}
+
+.input-group.cb > :nth-child(1) {
+  order: 1;
+  margin-left: 1.1rem;
+}
+
+.input-group.cb > :nth-child(2) {
+  margin: 0;
+}
+
+.checkbox-container {
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 0.1rem solid var(--clr-gray-3);
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+.checkbox-container > input {
+  transform: scale(1.7);
+  opacity: 0;
+}
+
+.checkbox-container > input:checked + .checked {
+  background-color: var(--clr-orange);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.action {
+  margin-top: 2.3rem;
+  text-align: right;
+}
+
+button {
+  padding: 1.7rem 4.5rem;
+  background-color: var(--clr-orange);
+  color: var(--clr-white);
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+.material-icons {
+  color: var(--clr-gray-3);
+  font-size: var(--fs-lg);
 }
