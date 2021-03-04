@@ -27,5 +27,179 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Checkout</h1>
+    </header>
+    <main>
+      <form action="#">
+        <section class="form-group">
+          <h2>Contact infomation</h2>
+          <div class="input-group">
+            <label for="email">E-mail</label>
+            <div class="input-field">
+              <i class="material-icons">mail</i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email..."
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="phone">Phone</label>
+            <div class="input-field">
+              <i class="material-icons">phone</i>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone..."
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="form-group">
+          <h2>Shipping address</h2>
+          <div class="input-group">
+            <label for="name">Full name</label>
+            <div class="input-field">
+              <i class="material-icons">account_circle</i>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name..."
+                autocomplete="off"
+                spellcheck="false"
+                value="Rodney Cotton"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="address">Address</label>
+            <div class="input-field">
+              <i class="material-icons">home</i>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                placeholder="Your address.."
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="city">City</label>
+            <div class="input-field">
+              <i class="material-icons">apartment</i>
+              <input
+                type="text"
+                name="city"
+                id="city"
+                placeholder="Your city.."
+                autocomplete="off"
+                spellcheck="off"
+              />
+            </div>
+          </div>
+          <div class="input-flex">
+            <div class="input-group">
+              <label for="country">Country</label>
+              <div class="input-field">
+                <i class="material-icons">public</i>
+                <select
+                  name="country"
+                  id="country"
+                  placeholder="Your country.."
+                >
+                  <option value="Australia">Australia</option>
+                  <option value="India">India</option>
+                  <option value="England">England</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Finland">Finland</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="code">Postal code</label>
+              <div class="input-field">
+                <i class="material-icons">markunread_mailbox</i>
+                <input
+                  type="text"
+                  placeholder="Your postal code.."
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="save">Save this information for next time</label>
+            <div class="checkbox-container">
+              <input type="checkbox" name="save" id="save" />
+              <span class="checked"></span>
+            </div>
+          </div>
+        </section>
+        <button type="submit">Continue</button>
+      </form>
+      <div class="orders">
+        <div class="products">
+          <section class="product">
+            <h3>Vintage Backbag</h3>
+            <img src="./assets/images/photo1.png" alt="" />
+            <div class="prices">
+              <p class="offered-price">$54.99</p>
+              <p class="actual-price">$94.99</p>
+            </div>
+            <div class="quantity">
+              <i class="material-icons">remove</i>
+              <input
+                type="number"
+                autocomplete="off"
+                spellcheck="false"
+                value="1"
+              />
+              <i class="material-icons">add</i>
+            </div>
+          </section>
+          <section class="product">
+            <h3>Levi Shoes</h3>
+            <img src="./assets/images/photo2.png" alt="" />
+            <div class="prices">
+              <p class="offered-price">$74.99</p>
+              <p class="actual-price">$124.99</p>
+            </div>
+            <div class="quantity">
+              <i class="material-icons">remove</i>
+              <input
+                type="number"
+                autocomplete="off"
+                spellcheck="false"
+                value="1"
+              />
+              <i class="material-icons">add</i>
+            </div>
+          </section>
+        </div>
+        <div class="charge">
+          <div class="flex">
+            <p>Shipping</p>
+            <p>$19</p>
+          </div>
+          <div class="flex">
+            <p>Total</p>
+            <p>$148.98</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
