@@ -1,18 +1,30 @@
+/* COLORS */
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-primary: hsl(160, 2%, 31%);
+  --clr-gray-1: hsl(0, 0%, 20%);
+  --clr-gray-2: hsl(0, 0%, 31%);
+  --clr-gray-3: hsl(0, 0%, 51%);
+  --clr-gray-4: hsl(0, 0%, 74%);
+  --clr-gray-5: hsl(0, 0%, 88%);
+  --clr-gray-6: hsl(0, 0%, 95%, 1);
+}
+
+/* FONTS */
+
 :root {
   --ff: "Montserrat", sans-serif;
-  --fw-600: 600;
-  --fw-700: 700;
-  --clr-primary-1: hsla(0, 0%, 100%, 1);
-  --clr-primary-2: hsla(0, 0%, 74%, 1);
-  --clr-primary-3: hsla(0, 0%, 51%, 1);
-  --clr-secondary: hsla(160, 2%, 31%, 1);
-  --clr-orange: hsla(28, 87%, 62%, 1);
-  --fs-12: 1.2rem;
-  --fs-14: 1.4rem;
-  --fs-16: 1.6rem;
-  --fs-18: 1.8rem;
-  --magic: 11vw;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fs-xs: 1.2rem;
+  --fs-sm: 1.4rem;
+  --fs-md: 1.6rem;
+  --fs-lg: 1.8rem;
+  --fs-xl: 3.6rem;
 }
+
+/* RESETS */
 
 * {
   margin: 0;
@@ -26,8 +38,8 @@
 }
 
 html {
-  font-size: 62.5%;
   position: relative;
+  font-size: 62.5%;
 }
 
 html,
@@ -35,20 +47,28 @@ body {
   min-height: 100%;
 }
 
-ul {
-  list-style: none;
-}
-
-i[class],
-img {
+img,
+i[class] {
   user-select: none;
 }
 
+input,
+button {
+  font: inherit;
+}
+
+input:focus,
+button:focus {
+  outline: 0;
+}
+
+/* BODY */
+
 body {
-  font-weight: var(--fw-600);
-  font-family: var(--ff);
-  background-color: var(--clr-primary-1);
-  width: calc(100% - (clamp(1px, var(--magic), 240px) * 2));
-  margin: auto;
+  background-color: var(--clr-white);
   padding: 6.4rem 0;
+  width: calc(100% - (clamp(1px, 11vw, 240px) * 2));
+  margin: auto;
+  font: var(--fw-semibold) var(--fs-md) var(--ff);
+  color: var(--clr-gray-1);
 }
