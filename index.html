@@ -18,7 +18,7 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -34,7 +34,7 @@
     <main>
       <form action="#">
         <section class="form-group">
-          <h2>Contact infomation</h2>
+          <h2>Contact information</h2>
           <div class="input-group">
             <label for="email">E-mail</label>
             <div class="input-field">
@@ -105,7 +105,7 @@
                 id="city"
                 placeholder="Your city.."
                 autocomplete="off"
-                spellcheck="off"
+                spellcheck="false"
               />
             </div>
           </div>
@@ -114,11 +114,8 @@
               <label for="country">Country</label>
               <div class="input-field">
                 <i class="material-icons">public</i>
-                <select
-                  name="country"
-                  id="country"
-                  placeholder="Your country.."
-                >
+                <select name="country" id="country">
+                  <option value="0" selected disabled>Your country..</option>
                   <option value="Australia">Australia</option>
                   <option value="India">India</option>
                   <option value="England">England</option>
@@ -133,6 +130,8 @@
                 <i class="material-icons">markunread_mailbox</i>
                 <input
                   type="text"
+                  name="code"
+                  id="code"
                   placeholder="Your postal code.."
                   autocomplete="off"
                   spellcheck="false"
@@ -140,7 +139,7 @@
               </div>
             </div>
           </div>
-          <div class="input-group">
+          <div class="input-group cb">
             <label for="save">Save this information for next time</label>
             <div class="checkbox-container">
               <input type="checkbox" name="save" id="save" />
@@ -148,7 +147,9 @@
             </div>
           </div>
         </section>
-        <button type="submit">Continue</button>
+        <div class="action">
+          <button type="submit">Continue</button>
+        </div>
       </form>
       <div class="orders">
         <div class="products">
@@ -160,14 +161,14 @@
               <p class="actual-price">$94.99</p>
             </div>
             <div class="quantity">
-              <i class="material-icons">remove</i>
+              <button><i class="material-icons">remove</i></button>
               <input
                 type="number"
                 autocomplete="off"
                 spellcheck="false"
                 value="1"
               />
-              <i class="material-icons">add</i>
+              <button><i class="material-icons">add</i></button>
             </div>
           </section>
           <section class="product">
@@ -178,23 +179,23 @@
               <p class="actual-price">$124.99</p>
             </div>
             <div class="quantity">
-              <i class="material-icons">remove</i>
+              <button><i class="material-icons">remove</i></button>
               <input
                 type="number"
                 autocomplete="off"
                 spellcheck="false"
                 value="1"
               />
-              <i class="material-icons">add</i>
+              <button><i class="material-icons">add</i></button>
             </div>
           </section>
         </div>
         <div class="charge">
-          <div class="flex">
+          <div>
             <p>Shipping</p>
             <p>$19</p>
           </div>
-          <div class="flex">
+          <div>
             <p>Total</p>
             <p>$148.98</p>
           </div>
