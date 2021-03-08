@@ -77,6 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
     }
   });
+  document.querySelector(".modal").addEventListener("click", function (e) {
+    if (e.target.className == "modal view") {
+      this.classList.remove("view");
+      document.querySelector("form").reset();
+    }
+  });
   document.querySelector("form").addEventListener("submit", function (e) {
     e.preventDefault();
     const email = document.getElementById("email");
@@ -90,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const city = document.getElementById("city");
 
     validation([email, phone, name, address, city, country, code, bags, shoes])
-      .then((data) => console.log(data))
+      .then((data) => document.querySelector(".modal").classList.add("view"))
       .catch((err) => {
         const elem = document.querySelector(`[name = ${err.name}]`);
         elem.focus();

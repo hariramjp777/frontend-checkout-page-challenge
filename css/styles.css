@@ -11,6 +11,10 @@
   --clr-gray-6: hsl(0, 0%, 95%, 1);
   --clr-orange: hsl(28, 87%, 62%);
   --clr-red: hsl(0, 100%, 74%);
+  --clr-modal: hsla(0, 100%, 84%, 0.3);
+  --clr-green: hsl(154, 59%, 51%);
+  --clr-light-green: hsla(154, 59%, 51%, 0.5);
+  --clr-violet: hsl(248, 32%, 49%);
 }
 
 /* FONTS */
@@ -440,4 +444,88 @@ h3 {
   100% {
     opacity: 0;
   }
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--clr-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+}
+.modal .inner {
+  background-color: var(--clr-green);
+  width: 50%;
+  height: 50%;
+  border-radius: 1.2rem;
+  color: var(--clr-white);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: scale(0.5);
+  transition: transform 0.5s ease;
+  cursor: auto;
+  box-shadow: 0.2rem 0.2rem 4.5rem var(--clr-light-green);
+}
+.modal .inner p:first-child {
+  font-size: 7rem;
+  color: var(--clr-violet);
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.modal .inner p:last-child {
+  font-size: 3rem;
+  font-weight: 400;
+}
+@media (max-height: 638px) {
+  .modal .inner {
+    height: 50rem;
+    margin: 1rem 0;
+  }
+}
+@media (max-width: 1204px) {
+  .modal .inner p:first-child {
+    font-size: 5.5vw;
+  }
+  .modal .inner p:last-child {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 991px) {
+  .modal .inner {
+    height: 30%;
+  }
+}
+@media (max-width: 312px) {
+  .modal .inner p:last-child {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 547px) {
+  .modal .inner {
+    width: 85%;
+  }
+}
+@media (max-width: 991px) and (max-height: 763px) {
+  .modal .inner {
+    height: 30rem;
+  }
+}
+.modal.view {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal.view .inner {
+  transform: scale(1);
 }
