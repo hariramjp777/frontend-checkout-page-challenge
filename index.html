@@ -46,6 +46,7 @@
                 placeholder="Enter your email..."
                 autocomplete="off"
                 spellcheck="false"
+                data-type="email"
               />
             </div>
           </div>
@@ -60,6 +61,7 @@
                 placeholder="Enter your phone..."
                 autocomplete="off"
                 spellcheck="false"
+                data-type="phone"
               />
             </div>
           </div>
@@ -78,6 +80,7 @@
                 autocomplete="off"
                 spellcheck="false"
                 value="Rodney Cotton"
+                data-type="text"
               />
             </div>
           </div>
@@ -92,6 +95,7 @@
                 placeholder="Your address.."
                 autocomplete="off"
                 spellcheck="false"
+                data-type="text"
               />
             </div>
           </div>
@@ -106,6 +110,7 @@
                 placeholder="Your city.."
                 autocomplete="off"
                 spellcheck="false"
+                data-type="text"
               />
             </div>
           </div>
@@ -114,7 +119,7 @@
               <label for="country">Country</label>
               <div class="input-field">
                 <i class="material-icons">public</i>
-                <select name="country" id="country">
+                <select name="country" id="country" data-type="country">
                   <option value="0" selected disabled>Your country..</option>
                   <option value="Australia">Australia</option>
                   <option value="India">India</option>
@@ -135,6 +140,7 @@
                   placeholder="Your postal code.."
                   autocomplete="off"
                   spellcheck="false"
+                  data-type="code"
                 />
               </div>
             </div>
@@ -142,7 +148,12 @@
           <div class="input-group cb">
             <label for="save">Save this information for next time</label>
             <div class="checkbox-container">
-              <input type="checkbox" name="save" id="save" />
+              <input
+                type="checkbox"
+                name="save"
+                id="save"
+                data-type="checkbox"
+              />
               <span class="checked"></span>
             </div>
           </div>
@@ -161,14 +172,20 @@
               <p class="actual-price">$94.99</p>
             </div>
             <div class="quantity">
-              <button><i class="material-icons">remove</i></button>
+              <button class="remove">
+                <i class="material-icons">remove</i>
+              </button>
               <input
                 type="number"
                 autocomplete="off"
                 spellcheck="false"
                 value="1"
+                readonly
+                name="bags"
+                id="bags"
+                data-type="quan"
               />
-              <button><i class="material-icons">add</i></button>
+              <button class="add"><i class="material-icons">add</i></button>
             </div>
           </section>
           <section class="product">
@@ -179,28 +196,35 @@
               <p class="actual-price">$124.99</p>
             </div>
             <div class="quantity">
-              <button><i class="material-icons">remove</i></button>
+              <button class="remove">
+                <i class="material-icons">remove</i>
+              </button>
               <input
                 type="number"
                 autocomplete="off"
                 spellcheck="false"
                 value="1"
+                readonly
+                name="shoes"
+                id="shoes"
+                data-type="quan"
               />
-              <button><i class="material-icons">add</i></button>
+              <button class="add"><i class="material-icons">add</i></button>
             </div>
           </section>
         </div>
         <div class="charge">
           <div>
             <p>Shipping</p>
-            <p>$19</p>
+            <p id="ship">$19</p>
           </div>
           <div>
             <p>Total</p>
-            <p>$148.98</p>
+            <p id="total">$148.98</p>
           </div>
         </div>
       </div>
     </main>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>
