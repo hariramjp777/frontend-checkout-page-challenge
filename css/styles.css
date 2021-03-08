@@ -431,6 +431,10 @@ h3 {
   border-color: var(--clr-orange);
 }
 
+button:focus {
+  box-shadow: 0 0 1.1rem var(--clr-orange);
+}
+
 .invalid {
   color: var(--clr-red);
   text-align: right;
