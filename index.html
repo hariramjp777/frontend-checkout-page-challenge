@@ -18,7 +18,7 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -32,166 +32,214 @@
       <h1>Checkout</h1>
     </header>
     <main>
-      <form action="#" class="form">
-        <section class="contact">
-          <h2>Contact infomation</h2>
-          <div class="form-group">
+      <form action="#">
+        <section class="form-group">
+          <h2>Contact information</h2>
+          <div class="input-group">
             <label for="email">E-mail</label>
-            <div class="form-input">
+            <div class="input-field">
               <i class="material-icons">mail</i>
               <input
                 type="email"
                 id="email"
+                name="email"
                 placeholder="Enter your email..."
                 autocomplete="off"
                 spellcheck="false"
+                data-type="email"
               />
             </div>
           </div>
-          <div class="form-group">
+          <div class="input-group">
             <label for="phone">Phone</label>
-            <div class="form-input">
+            <div class="input-field">
               <i class="material-icons">phone</i>
               <input
                 type="tel"
                 id="phone"
+                name="phone"
                 placeholder="Enter your phone..."
                 autocomplete="off"
                 spellcheck="false"
+                data-type="phone"
               />
             </div>
           </div>
         </section>
-        <section class="shipping">
+        <section class="form-group">
           <h2>Shipping address</h2>
-          <div class="form-group">
+          <div class="input-group">
             <label for="name">Full name</label>
-            <div class="form-input">
+            <div class="input-field">
               <i class="material-icons">account_circle</i>
               <input
                 type="text"
+                name="name"
                 id="name"
-                placeholder="Enter your full name..."
+                placeholder="Enter your name..."
                 autocomplete="off"
                 spellcheck="false"
-                value="Rodney Cotton"
+                data-type="text"
               />
             </div>
           </div>
-          <div class="form-group">
+          <div class="input-group">
             <label for="address">Address</label>
-            <div class="form-input">
+            <div class="input-field">
               <i class="material-icons">home</i>
               <input
                 type="text"
+                name="address"
                 id="address"
                 placeholder="Your address.."
                 autocomplete="off"
                 spellcheck="false"
+                data-type="text"
               />
             </div>
           </div>
-          <div class="form-group">
+          <div class="input-group">
             <label for="city">City</label>
-            <div class="form-input">
+            <div class="input-field">
               <i class="material-icons">apartment</i>
               <input
                 type="text"
+                name="city"
                 id="city"
                 placeholder="Your city.."
                 autocomplete="off"
                 spellcheck="false"
+                data-type="text"
               />
             </div>
           </div>
-          <div class="form-group-group">
-            <div class="form-group">
+          <div class="input-flex">
+            <div class="input-group">
               <label for="country">Country</label>
-              <div class="form-input">
+              <div class="input-field">
                 <i class="material-icons">public</i>
-                <select id="country">
-                  <option value="0">India</option>
-                  <option value="1">Australia</option>
-                  <option value="2">England</option>
-                  <option value="3">Sri Lanka</option>
-                  <option value="4">Pakistan</option>
+                <select name="country" id="country" data-type="country">
+                  <option value="0" selected disabled>Your country..</option>
+                  <option value="Australia">Australia</option>
+                  <option value="India">India</option>
+                  <option value="England">England</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Finland">Finland</option>
                 </select>
               </div>
             </div>
-            <div class="form-group">
+            <div class="input-group">
               <label for="code">Postal code</label>
-              <div class="form-input">
+              <div class="input-field">
                 <i class="material-icons">markunread_mailbox</i>
                 <input
                   type="text"
+                  name="code"
                   id="code"
                   placeholder="Your postal code.."
                   autocomplete="off"
                   spellcheck="false"
+                  data-type="code"
                 />
               </div>
             </div>
           </div>
-          <div class="form-group checkbox">
-            <div class="cb-container">
-              <input type="checkbox" id="check" />
-              <span class="check"></span>
+          <div class="input-group cb">
+            <label for="save">Save this information for next time</label>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                name="save"
+                id="save"
+                data-type="checkbox"
+              />
+              <span class="checked"></span>
             </div>
-            <label for="check">Save this information for next time</label>
           </div>
         </section>
-        <button id="submit">Continue</button>
+        <div class="action">
+          <button type="submit">Continue</button>
+        </div>
       </form>
-      <!-- <div class="products">
-        <section class="product">
-          <h3>Vintage Backbag</h3>
-          <div class="product-image">
-            <img src="./assets/images/photo1.png" alt="Vintage Backbag Photo" />
-          </div>
-          <div class="price">
-            <span class="offer-price">$54.99</span>
-            <span class="actual-price">$94.99</span>
-          </div>
-          <div class="order">
-            <button class="reduce">
-              <i class="material-icons">remove</i>
-            </button>
-            <span class="quantity">1</span>
-            <button class="increase">
-              <i class="material-icons">add</i>
-            </button>
-          </div>
-        </section>
-        <section class="product">
-          <h3>Levi Shoes</h3>
-          <div class="product-image">
-            <img src="./assets/images/photo2.png" alt="Levi Shoes" />
-          </div>
-          <div class="price">
-            <span class="offer-price">$74.99</span>
-            <span class="actual-price">$124.99</span>
-          </div>
-          <div class="order">
-            <button class="reduce">
-              <i class="material-icons">remove</i>
-            </button>
-            <span class="quantity">1</span>
-            <button class="increase">
-              <i class="material-icons">add</i>
-            </button>
-          </div>
-        </section>
-        <div class="bill">
+      <div class="orders">
+        <div class="products">
+          <section class="product">
+            <h3>Vintage Backbag</h3>
+            <img src="./assets/images/photo1.png" alt="" />
+            <div class="prices">
+              <p class="offered-price">$54.99</p>
+              <p class="actual-price">$94.99</p>
+            </div>
+            <div class="quantity">
+              <button class="remove">
+                <i class="material-icons">remove</i>
+              </button>
+              <input
+                type="number"
+                autocomplete="off"
+                spellcheck="false"
+                value="1"
+                readonly
+                name="bags"
+                id="bags"
+                data-type="quan"
+              />
+              <button class="add"><i class="material-icons">add</i></button>
+            </div>
+          </section>
+          <section class="product">
+            <h3>Levi Shoes</h3>
+            <img src="./assets/images/photo2.png" alt="" />
+            <div class="prices">
+              <p class="offered-price">$74.99</p>
+              <p class="actual-price">$124.99</p>
+            </div>
+            <div class="quantity">
+              <button class="remove">
+                <i class="material-icons">remove</i>
+              </button>
+              <input
+                type="number"
+                autocomplete="off"
+                spellcheck="false"
+                value="1"
+                readonly
+                name="shoes"
+                id="shoes"
+                data-type="quan"
+              />
+              <button class="add"><i class="material-icons">add</i></button>
+            </div>
+          </section>
+        </div>
+        <div class="charge">
           <div>
-            <h2>Shipping</h2>
-            <span class="price">$19</span>
+            <p>Shipping</p>
+            <p id="ship">$19</p>
           </div>
-          <div class="total">
-            <h2>Total</h2>
-            <span class="price">$148.98</span>
+          <div>
+            <p>Total</p>
+            <p id="total">$148.98</p>
           </div>
         </div>
-      </div> -->
+      </div>
     </main>
+    <div class="modal">
+      <div class="inner">
+        <p>Thank You</p>
+        <p>Product ordered</p>
+        <p id="pay"></p>
+      </div>
+    </div>
+    <footer class="attribution">
+      <p>
+        <a href="https://github.com/hariramjp777" target="_blank"
+          >Hari Ram J P</a
+        >
+        <span>&#64;</span>
+        <a href="http://devchallenges.io/" target="_blank">DevChallenges.io</a>
+      </p>
+    </footer>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>
