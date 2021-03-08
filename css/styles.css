@@ -478,11 +478,15 @@ h3 {
   cursor: auto;
   box-shadow: 0.2rem 0.2rem 4.5rem var(--clr-light-green);
 }
+
+.modal .inner > * + * {
+  margin-top: 3rem;
+}
+
 .modal .inner p:first-child {
   font-size: 7rem;
   color: var(--clr-violet);
   font-weight: 600;
-  margin-bottom: 3rem;
 }
 .modal .inner p:last-child {
   font-size: 3rem;
@@ -528,6 +532,10 @@ h3 {
 }
 .modal.view .inner {
   transform: scale(1);
+}
+
+#pay {
+  opacity: 0.5;
 }
 
 /* ATTRIBUTION */

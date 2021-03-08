@@ -96,7 +96,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const city = document.getElementById("city");
 
     validation([email, phone, name, address, city, country, code, bags, shoes])
-      .then((data) => document.querySelector(".modal").classList.add("view"))
+      .then((data) => {
+        document.querySelector(".modal").classList.add("view");
+        document.getElementById("pay").textContent = document.getElementById(
+          "total"
+        ).textContent;
+      })
       .catch((err) => {
         const elem = document.querySelector(`[name = ${err.name}]`);
         elem.focus();
