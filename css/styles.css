@@ -409,7 +409,7 @@ h3 {
   }
 }
 
-@media (max-width: 316px) {
+@media (max-width: 432px) {
   .product img {
     grid-row: 1/3;
   }
@@ -528,4 +528,29 @@ h3 {
 }
 .modal.view .inner {
   transform: scale(1);
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  text-align: center;
+  color: var(--gray);
+  font-size: var(--fs-sm);
+}
+
+.attribution a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 350px) {
+  .attribution p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
